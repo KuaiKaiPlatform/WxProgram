@@ -1,0 +1,27 @@
+/* pages/strategy/strategy.wxss */
+
+.strategy-bg {
+  width: 750rpx;
+  height: 1334rpx;
+  background-image: url('http://home.farm.zhuozhuogame.com/static/strategy/bg.png');
+  background-size: cover;
+}
+
+.strategy-button {
+  width: 413rpx;
+  height: 134rpx;
+  top: 940rpx;
+  position: absolute;
+  left: 168rpx;
+}
+
+.strategy-button-hide {
+  display: none;
+}
+
+.strategy-info {
+  width: 750rpx;
+  height: 1334rpx;
+  background-image: url('http://home.farm.zhuozhuogame.com/static/strategy/info.jpg');
+  background-size: cover;
+}

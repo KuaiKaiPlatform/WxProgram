@@ -1,0 +1,153 @@
+  <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:3rpx solid #000;">
+    <view>
+        <image src="{{club.head}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view style="flex: 1;">{{club.name}}</view>
+    <view style="text-align:right; color:#999;">{{club.total}}人</view>
+  </view>
+
+  <view style="padding: 0px 15px; display: flex;">
+
+    <!-- 玩法 -->
+    <view style="flex: 1; margin: auto;">
+      <view style="color:#888888; font-size:14px;">
+        <block wx:for="{{club.rules}}">【{{item.name}}】</block>
+      </view>
+    </view>
+
+    <!-- 操作：规则、排行榜、赛况、设置等 -->
+    <view>
+      <button type="primary" flex="1" plain="true" size="mini" bindtap="showActionDetails"> {{actions[club.owner][club.currentAction]}} </button>
+      <button type="primary" flex="1" plain="true" size="mini" style="margin-left: 10px;" bindtap="showActionSheet"> ... </button>
+    </view>
+
+  </view>
+
+  <!-- 玩法规则 -->
+  <block wx:for="{{club.rules}}" wx:key="{{id}}">
+    <rule club="{{club}}" rule="{{item}}" />
+  </block>
+
+  <!-- 排行榜 -->
+  <block wx:for="{{club.rules}}" wx:key="{{id}}">
+    <ranking club="{{club}}" rule="{{item}}" ranking="{{club.currentAction == 1?item.ranking.cumulative:item.ranking.today}}" actions="{{actions}}"/>
+  </block>
+
+  <!-- 辅助操作和主要操作 -->
+  <view style="display:flex; flex-direction: raw; padding: 10px 15px;">
+    <button type="default" bindtap="secondaryAction" style="flex: 1; margin-right: 10px;"> 
+      <block wx:if="{{club.owner == 'pub'}}">邀请好友</block>
+      <block wx:elif="{{club.total < 3}}">进入大厅</block>
+      <block wx:else>邀请好友</block> 
+    </button>
+    <button type="primary" bindtap="primaryAction" style="flex: 1;"> 
+      <block wx:if="{{club.owner == 'pub'}}">快速开始</block>
+      <block wx:elif="{{club.total < 3}}">邀请好友</block>
+      <block wx:else>进入大厅</block> 
+    </button>
+  </view>
+
+  <!-- <view style="border-bottom: 1rpx solid #ccc;"> -->
+
+  <!-- <view style="padding-bottom: 20px;">
+
+    <view style="text-align:center; padding: 10px 15px; font-size: 17px;">
+      <button type="primary" plain="true" size="mini"> 总排行榜 </button>
+    </view>
+
+    <view style="display:flex; padding: 0px 15px; font-size: 14px; color: #999;">
+      <view style="flex: 1;">【亮六飞一】</view>
+      <view style="text-align: right;">我的排名（32）净得分（-42）</view>
+    </view>
+
+    <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:1rpx solid #ccc;">
+      <view>
+          <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view style="flex: 4;">阿劣</view>
+      <view style="flex: 1; color:#999; text-align: right;">1</view>
+      <view style="flex: 1; color:#999; text-align: right;">+43</view>
+    </view>
+
+    <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:1rpx solid #ccc;">
+      <view>
+          <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view style="flex: 4;">飞花似雾</view>
+      <view style="flex: 1; color:#999; text-align: right;">2</view>
+      <view style="flex: 1; color:#999; text-align: right;">+41</view>
+    </view>
+
+    <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:1rpx solid #ccc;">
+      <view>
+          <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view style="flex: 4;">漠东</view>
+      <view style="flex: 1; color:#999; text-align: right;">3</view>
+      <view style="flex: 1; color:#999; text-align: right;">+38</view>
+    </view>
+
+    <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:1rpx solid #ccc;">
+      <view>
+          <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view style="flex: 4;">飞花似雾</view>
+      <view style="flex: 1; color:#999; text-align: right;">4</view>
+      <view style="flex: 1; color:#999; text-align: right;">+38</view>
+    </view>
+
+    <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:1rpx solid #ccc;">
+      <view>
+          <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view style="flex: 4;">漠东</view>
+      <view style="flex: 1; color:#999; text-align: right;">5</view>
+      <view style="flex: 1; color:#999; text-align: right;">+38</view>
+    </view>
+
+    <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:1rpx solid #ccc;">
+      <view>
+          <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view style="flex: 4;">飞花似雾</view>
+      <view style="flex: 1; color:#999; text-align: right;">6</view>
+      <view style="flex: 1; color:#999; text-align: right;">+35</view>
+    </view>
+
+    <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:1rpx solid #ccc;">
+      <view>
+          <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view style="flex: 4;">漠东</view>
+      <view style="flex: 1; color:#999; text-align: right;">7</view>
+      <view style="flex: 1; color:#999; text-align: right;">+32</view>
+    </view>
+
+    <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:1rpx solid #ccc;">
+      <view>
+          <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view style="flex: 4;">飞花似雾</view>
+      <view style="flex: 1; color:#999; text-align: right;">8</view>
+      <view style="flex: 1; color:#999; text-align: right;">+24</view>
+    </view>
+
+    <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:1rpx solid #ccc;">
+      <view>
+          <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view style="flex: 4;">漠东</view>
+      <view style="flex: 1; color:#999; text-align: right;">9</view>
+      <view style="flex: 1; color:#999; text-align: right;">+21</view>
+    </view>
+
+    <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:1rpx solid #ccc;">
+      <view>
+          <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view style="flex: 4;">飞花似雾</view>
+      <view style="flex: 1; color:#999; text-align: right;">10</view>
+      <view style="flex: 1; color:#999; text-align: right;">+18</view>
+    </view>
+
+  </view> -->

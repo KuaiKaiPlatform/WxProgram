@@ -1,0 +1,34 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 开启 </button>
+    <block wx:else>
+
+      <view class="weui-grids">
+        <navigator url="../clubs/clubs" class="weui-grid" hover-class="weui-grid_active" style="width: 50%;">
+            <image class="weui-grid__icon" src="../../images/sit.png" />
+            <view class="weui-grid__label">竞技场</view>
+        </navigator>
+        <navigator url="../clubs/clubs" class="weui-grid" hover-class="weui-grid_active" style="width: 50%;">
+            <image class="weui-grid__icon" src="../../images/sit.png" />
+            <view class="weui-grid__label">赛况</view>
+        </navigator>
+        <navigator url="../clubs/clubs" class="weui-grid" hover-class="weui-grid_active" style="width: 50%;">
+            <image class="weui-grid__icon" src="../../images/sit.png" />
+            <view class="weui-grid__label">推广</view>
+        </navigator>
+        <navigator url="../mine/mine" class="weui-grid" hover-class="weui-grid_active" style="width: 50%;">
+            <image class="weui-grid__icon" src="../../images/sit.png" />
+            <view class="weui-grid__label">我的</view>
+        </navigator>
+      </view>
+
+      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

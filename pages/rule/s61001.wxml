@@ -1,0 +1,49 @@
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">局数</view>
+        </view>
+        <view class="weui-cell__bd">
+            <picker bindchange="bindCountryChange" value="{{countryIndex}}" range="{{countries}}">
+                <view class="weui-select weui-select_in-select-after">{{countries[countryIndex]}}</view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">人数</view>
+        </view>
+        <view class="weui-cell__bd">
+            <picker bindchange="bindCountryChange" value="{{totalPlayerIndex}}" range="{{totalPlayers}}" disabled="true">
+                <view class="weui-select weui-select_in-select-after">{{totalPlayers[totalPlayerIndex]}}</view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">底分</view>
+        </view>
+        <view class="weui-cell__bd">
+            <picker bindchange="bindCountryChange" value="{{baseRateIndex}}" range="{{baseRates}}">
+                <view class="weui-select weui-select_in-select-after">{{baseRates[baseRateIndex]}}</view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="weui-cell weui-cell_switch">
+        <view class="weui-cell__bd">十三不靠</view>
+        <view class="weui-cell__ft">
+            <switch checked disabled="true" />
+        </view>
+    </view>
+
+    <view class="weui-cell weui-cell_switch">
+        <view class="weui-cell__bd">十三幺</view>
+        <view class="weui-cell__ft">
+            <switch checked />
+        </view>
+    </view>
+
+</view>

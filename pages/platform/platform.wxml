@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+
+  <view class="withdraw">
+    <image class="withdraw-icon" src="http://home.farm.zhuozhuogame.com/static/withdraw.png" mode="cover"></image>
+    <text class="withdraw-text">提现金额</text>
+    <text class="withdraw-money">￥1.00</text>
+  </view>
+
+  <view class="withdraw-button">
+    <button type="primary" disabled="{{disabled}}" open-type="getUserInfo" bindgetuserinfo="onClickWithdraw"> {{withdrawButton}} </button>
+    <!-- <button type="primary" bindtap="onClickWithdraw" disabled="{{disabled}}"> {{withdrawButton}} </button> -->
+  </view>
+
+  <view class="withdraw-more">
+    <text>小程序可提现一元至微信红包</text>
+  </view>
+
+</view>

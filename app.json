@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/navbar/navbar",
+    "pages/hall/hall",
+    "pages/club/club",
+    "pages/mine/mine",
+    "pages/platform/platform",
+    "pages/strategy/strategy",
+    "pages/withdraw/withdraw",
+    "pages/clubs/clubs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "快开竞技平台",
+    "navigationBarTextStyle": "white"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx893260ea77b23e55"
+  ]
+}

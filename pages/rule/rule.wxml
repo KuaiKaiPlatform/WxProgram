@@ -1,0 +1,12 @@
+
+<view hidden="{{!club.showActionDetails || club.currentAction != 3}}">
+  <view style="text-align:center; margin: 10px 15px; font-size: 15px;" hidden="{{club.rules.length <= 1}}">
+    【{{rule.name}}】
+  </view>
+
+  <block wx:if="{{rule.id == 61001}}"><s61001 rule="{{rule}}" /></block>
+  <block wx:elif="{{rule.id == 61002}}"><s61002 rule="{{rule}}" /></block>
+  <block wx:elif="{{rule.id == 99006}}"><s99006 rule="{{rule}}" /></block>
+  <block wx:elif="{{rule.id == 99007}}"><s99007 rule="{{rule}}" /></block>
+
+</view>

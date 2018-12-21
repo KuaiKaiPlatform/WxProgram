@@ -1,0 +1,8 @@
+<!--pages/strategy/strategy.wxml-->
+<!-- <view class="container"> -->
+
+  <view class="{{clsBg}}">
+    <image class="{{clsBtn}}" bindtap="toInfo" src="http://home.farm.zhuozhuogame.com/static/strategy/view.png"></image>
+  </view>
+
+<!-- </view> -->

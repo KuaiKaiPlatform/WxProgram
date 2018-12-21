@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "快开竞技场",
+  "usingComponents": {
+    "club": "../club/club",
+    "ranking": "../ranking/ranking"
+  }
+}

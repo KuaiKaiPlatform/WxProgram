@@ -1,0 +1,6 @@
+/* pages/club/club.wxss */
+
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+}

@@ -1,0 +1,35 @@
+/**withdraw.wxss**/
+.withdraw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.withdraw-icon {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 20rpx;
+}
+
+.withdraw-text {
+  margin: 20rpx;
+  color: #000000;
+  font-size: 50rpx;
+}
+
+.withdraw-money {
+  margin: 20rpx;
+  color: #000000;
+  font-size: 80rpx;
+}
+
+.withdraw-button {
+  width: 500rpx;
+  margin-top: 50rpx;
+}
+
+.withdraw-more {
+  color: #7e8cb0;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}

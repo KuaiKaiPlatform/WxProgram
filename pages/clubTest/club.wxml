@@ -1,0 +1,54 @@
+<view style="display:flex; flex-direction:column;">
+
+  <view style="display:flex; padding: 10px 15px; font-size:17px;">
+    <view>
+        <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view style="flex: 1;">大众亮六飞一</view>
+    <view style="text-align:right; color:#999;">1125人</view>
+  </view>
+
+  <view style="display:flex; padding: 10px 15px;">
+    <button type="primary" bindtap="enterHall"> 进入大厅（35在线） </button>
+    <button type="primary"> 规则 </button>
+  </view>
+
+  <view class="weui-tab">
+      <view class="weui-navbar">
+          <view id="0" class="weui-navbar__item {{activeIndex == 0 ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <view class="weui-navbar__title">排行榜</view>
+          </view>
+          <view id="1" class="weui-navbar__item {{activeIndex == 1 ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <view class="weui-navbar__title">赛况</view>
+          </view>
+          <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px); width: 375rpx;"></view>
+      </view>
+      <view class="weui-tab__panel">
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">排行榜的内容</view>
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">赛况的内容</view>
+      </view>
+  </view>
+
+</view>
+
+
+<!-- <view class="page">
+    <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="../hall/hall" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">娱乐无十三幺</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">25人</view>
+            </navigator>
+            <navigator url="../hall/hall" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">大众亮六飞一</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">1125人</view>
+            </navigator>
+        </view>
+    </view>
+</view> -->

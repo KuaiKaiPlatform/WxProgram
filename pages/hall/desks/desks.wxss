@@ -1,0 +1,48 @@
+.hall-desk-base {
+  width: 720rpx;
+  height: 500rpx;
+  position: absolute;
+  margin-bottom: 20rpx;
+  top: 120rpx;
+  left: 15rpx;
+}
+
+.hall-desk {
+  width: 360rpx;
+  height: 360rpx;
+  position: absolute;
+  left: 180rpx;
+  top: 80rpx;
+}
+
+.hall-chair-dong {
+  position: absolute;
+  left: 100rpx;
+  top: 210rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.hall-chair-nan {
+  position: absolute;
+  left: 320rpx;
+  bottom: 0rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.hall-chair-xi {
+  position: absolute;
+  right: 100rpx;
+  top: 210rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.hall-chair-bei {
+  position: absolute;
+  left: 320rpx;
+  top: 0rpx;
+  width: 80rpx;
+  height: 80rpx;
+}

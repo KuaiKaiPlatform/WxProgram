@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view style="display:flex; flex-direction:column;">
+
+  <desks/>
+
+  <!-- <view class='bottom-tab'>
+    <view class='tab-item {{currentTab == 0 ? "active" : ""}}' data-current="0" bindtap='switchTab'>
+
+      <text class='item-text'>比赛大厅</text>
+    </view>
+
+    <view class='tab-item {{currentTab == 1 ? "active" : ""}}' data-current="1" bindtap='switchTab'>
+      
+      <text class='item-text'>排行榜</text>
+    </view>
+
+    <view class='tab-item {{currentTab == 2 ? "active" : ""}}' data-current="2" bindtap='switchTab'>
+      
+      <text class='item-text'>赛况</text>
+    </view>
+
+    <view class='tab-item {{currentTab == 3 ? "active" : ""}}' data-current="3" bindtap='switchTab'>
+      
+      <text class='item-text'>推广</text>
+    </view>
+
+  </view> -->
+  
+      <!-- <image src='{{currentTab == 0 ? "../../assets/home_active.png" : "../../assets/home.png"}}' class='item-img'></image> -->
+      <!-- <image src='{{currentTab == 1 ? "../../assets/mine_active.png" : "../../assets/mine.png"}}' class='item-img'></image> -->
+      <!-- <image src='{{currentTab == 0 ? "../../assets/home_active.png" : "../../assets/home.png"}}' class='item-img'></image> -->
+      <!-- <image src='{{currentTab == 0 ? "../../assets/home_active.png" : "../../assets/home.png"}}' class='item-img'></image> -->
+
+
+
+</view>

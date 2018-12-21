@@ -1,0 +1,31 @@
+
+<view style="display:flex; flex-direction:column;">
+
+  <block wx:for="{{clubs}}" wx:key="{{id}}">
+    <club club="{{item}}" />
+  </block>
+
+  <!-- <view class="weui-flex" style="padding: 20px 15px; justify-content: flex-end;">
+      <view style="margin-right: 10px;"><button type="default" plain="true" size="mini"> 退出 </button></view>
+      <view style="margin-right: 10px;"><button type="primary" plain="true" size="mini"> 每日排行 </button></view>
+      <view><button type="primary" plain="true" size="mini"> 赛况 </button></view>
+  </view> -->
+
+  <!-- 牌友圈 -->
+  <!-- <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:3rpx solid #000;">
+    <view>
+        <image src="{{userInfo.avatarUrl}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view style="flex: 1;">大众亮六飞一</view>
+    <view style="text-align:right; color:#999;">1125人</view>
+  </view>
+
+  <view style="padding-right: 15px; color:#888888; text-align:right; font-size:14px;">玩法：亮六飞一，捉老麻子</view>
+
+  <view style="display:flex; padding: 10px 15px; border-bottom:1rpx solid #ccc;">
+    <button type="default" plain="true" size="mini"> 规则 </button>
+    <button type="default" plain="true" size="mini"> 赛况 </button>
+    <button type="primary" size="mini" bindtap="enterHall"> 进入大厅（648人在线） </button>
+  </view> -->
+
+</view>

@@ -1,0 +1,27 @@
+<view style="padding-top:10px; border-bottom:1rpx solid #ccc;" hidden="{{!club.showActionDetails || (club.currentAction != 0 && club.currentAction != 1)}}">
+
+  <view style="text-align:center; margin: 10px 15px; font-size: 15px;" hidden="{{club.rules.length <= 1}}">
+    【{{rule.name}}】
+  </view>
+
+  <!-- <view style="text-align:center; padding: 10px 15px; font-size: 17px;">
+      <button type="primary" plain="true" size="mini"> 总排行榜 </button>
+    </view> -->
+
+  <view style="display:flex; padding: 0px 15px; font-size: 14px; color: #999;">
+    <!-- <view style="flex: 1;"> {{actions[club.owner][club.currentAction]}} </view> -->
+    <view style="text-align: right;">总局数（{{ranking.total}}）我的排名（{{ranking.mine.rank}}）净得分（{{ranking.mine.score}}）</view>
+  </view>
+
+  <block wx:for="{{ranking.list}}">
+    <view style="display:flex; padding: 10px 15px; font-size:17px; border-top:1rpx solid #ccc;">
+      <view>
+        <image src="{{item.head}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view style="flex: 4;">{{item.name}}</view>
+      <view style="flex: 1; color:#999; text-align: right;">{{item.rank}}</view>
+      <view style="flex: 1; color:#999; text-align: right;">{{item.score}}</view>
+    </view>
+  </block>
+
+</view>
